@@ -13,6 +13,8 @@ if [ ! -f /usr/share/nginx/www/wp-config.php ]; then
   # echo $MYSQL_PASSWORD > /mysql-root-pw.txt
   # echo $WORDPRESS_PASSWORD > /wordpress-db-pw.txt
 
+  DB_HOST=$(cat /ecs/ecs.config | cut -d'=' -f 2).rds.wpcloudhosting.org
+
   sed -e "s/database_name_here/$DB_NAME/
   s/username_here/$DB_USER/
   s/password_here/$DB_PASSWORD/
