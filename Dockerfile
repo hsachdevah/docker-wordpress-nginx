@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Himanshu Sachdeva (CloudThat) <hsachdeva@cloudthat.com>
+MAINTAINER Himanshu Sachdeva (CloudThat Technologies) <hsachdeva@cloudthat.com>
 
 # Keep upstart from complaining
 RUN dpkg-divert --local --rename --add /sbin/initctl
